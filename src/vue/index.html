@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Vue.js Table Rendering test</h1>
+  <p> Vue.jsの学習ついでにv-forディレクティブのレンダリングスピードのテスト </p>
+  <p> 1000行1000列のテーブルを生成します。</p>
+  <div id="app">
+      <table>
+         <thead>
+	   <tr>
+	      <th v-for="data in table_data"> {{data[0]}} </th>
+	   </tr>
+	 </thead>
+	 <tbody>
+	     <tr v-for="data in table_data">
+	       <td v-for="a in data"> {{ a }} </td>
+	     </tr>
+	 </tbody>
+      </table>
+  </div>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="./main.js"></script>
+</body>
+</html>
